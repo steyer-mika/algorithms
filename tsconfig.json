@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "CommonJS",
     "target": "ESNext",
     "sourceMap": true,
     "outDir": "dist",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "removeComments": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -20,5 +20,5 @@
     "noImplicitAny": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }
