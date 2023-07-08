@@ -1,7 +1,7 @@
 export class TreeNode<T> {
-  public readonly value: T;
-  public readonly leftNode: TreeNode<T> | null;
-  public readonly rightNode: TreeNode<T> | null;
+  public value: T;
+  public leftNode: TreeNode<T> | null;
+  public rightNode: TreeNode<T> | null;
 
   constructor(
     value: T,
