@@ -1,35 +1,37 @@
 import { TreeNode } from "./tree-node";
 
-describe("Binary Tree Node", () => {
-  it("should access value", () => {
-    const node = new TreeNode(1);
+describe("TreeNode", () => {
+  describe("constructor", () => {
+    it("should set the value of the node", () => {
+      const node = new TreeNode(1);
 
-    expect(node.value).toEqual(1);
-  });
+      expect(node.value).toEqual(1);
+    });
 
-  it("should access left node", () => {
-    const leftNode = new TreeNode(2);
-    const node = new TreeNode(1, leftNode);
+    it("should set the left node when provided", () => {
+      const leftNode = new TreeNode(2);
+      const node = new TreeNode(1, leftNode);
 
-    expect(node.leftNode?.value).toEqual(2);
-  });
+      expect(node.leftNode?.value).toEqual(2);
+    });
 
-  it("should access right node", () => {
-    const rightNode = new TreeNode(2);
-    const node = new TreeNode(1, undefined, rightNode);
+    it("should set the right node when provided", () => {
+      const rightNode = new TreeNode(2);
+      const node = new TreeNode(1, undefined, rightNode);
 
-    expect(node.rightNode?.value).toEqual(2);
-  });
+      expect(node.rightNode?.value).toEqual(2);
+    });
 
-  it("should initialize left node to null", () => {
-    const node = new TreeNode(1);
+    it("should initialize the left node to null if not provided", () => {
+      const node = new TreeNode(1);
 
-    expect(node.leftNode).toEqual(null);
-  });
+      expect(node.leftNode).toBeNull();
+    });
 
-  it("should initialize right node to null", () => {
-    const node = new TreeNode(1);
+    it("should initialize the right node to null if not provided", () => {
+      const node = new TreeNode(1);
 
-    expect(node.rightNode).toEqual(null);
+      expect(node.rightNode).toBeNull();
+    });
   });
 });
