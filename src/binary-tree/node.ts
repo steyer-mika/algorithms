@@ -1,14 +1,14 @@
 export class Node<T> {
-  public readonly data: T;
+  public readonly value: T;
   public readonly leftNode: Node<T> | null;
   public readonly rightNode: Node<T> | null;
 
   constructor(
-    data: T,
+    value: T,
     leftNode: Node<T> | null = null,
     rightNode: Node<T> | null = null
   ) {
-    this.data = data;
+    this.value = value;
     this.leftNode = leftNode;
     this.rightNode = rightNode;
   }

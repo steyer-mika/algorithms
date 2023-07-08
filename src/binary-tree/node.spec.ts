@@ -1,24 +1,24 @@
 import { Node } from "./node";
 
 describe("Binary Tree Node", () => {
-  it("should access data", () => {
+  it("should access value", () => {
     const node = new Node(1);
 
-    expect(node.data).toEqual(1);
+    expect(node.value).toEqual(1);
   });
 
   it("should access left node", () => {
     const leftNode = new Node(2);
     const node = new Node(1, leftNode);
 
-    expect(node.leftNode?.data).toEqual(2);
+    expect(node.leftNode?.value).toEqual(2);
   });
 
   it("should access right node", () => {
     const rightNode = new Node(2);
     const node = new Node(1, undefined, rightNode);
 
-    expect(node.rightNode?.data).toEqual(2);
+    expect(node.rightNode?.value).toEqual(2);
   });
 
   it("should initialize left node to null", () => {
