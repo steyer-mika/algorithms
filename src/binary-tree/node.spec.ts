@@ -8,15 +8,17 @@ describe("Binary Tree Node", () => {
   });
 
   it("should access left node", () => {
-    const node = new Node(1, 2);
+    const leftNode = new Node(2);
+    const node = new Node(1, leftNode);
 
-    expect(node.leftNode).toEqual(2);
+    expect(node.leftNode?.data).toEqual(2);
   });
 
   it("should access right node", () => {
-    const node = new Node(1, 2, 3);
+    const rightNode = new Node(2);
+    const node = new Node(1, undefined, rightNode);
 
-    expect(node.rightNode).toEqual(3);
+    expect(node.rightNode?.data).toEqual(2);
   });
 
   it("should initialize left node to null", () => {
