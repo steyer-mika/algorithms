@@ -60,4 +60,10 @@ describe('quickSort function', () => {
     quickSort(unsortedArray);
     expect(unsortedArray).toEqual([1, 1, 2, 3, 4, 5, 6, 6]);
   });
+
+  it('should not preserve the original array', () => {
+    const inputArray = [5, 3, 9, 1, 7];
+    const sortedArray = quickSort(inputArray);
+    expect(inputArray).toEqual(sortedArray);
+  });
 });
