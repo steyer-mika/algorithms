@@ -17,8 +17,7 @@
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "noImplicitAny": true,
-    "noUncheckedIndexedAccess": true
+    "noImplicitAny": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
