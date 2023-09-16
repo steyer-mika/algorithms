@@ -1,8 +1,8 @@
-import { type TreeNode } from "../tree-node";
+import { type TreeNode } from '../tree-node';
 
 export const searchTreeRecursivelyAndRemove = <T>(
   value: T,
-  node: TreeNode<T> | null
+  node: TreeNode<T> | null,
 ): TreeNode<T> | null => {
   if (node === null) {
     return null;
@@ -32,7 +32,7 @@ export const searchTreeRecursivelyAndRemove = <T>(
     node.value = tempNode.value;
     node.rightNode = searchTreeRecursivelyAndRemove(
       tempNode.value,
-      node.rightNode
+      node.rightNode,
     );
     return node;
   }

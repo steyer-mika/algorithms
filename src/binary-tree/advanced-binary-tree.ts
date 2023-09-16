@@ -1,5 +1,5 @@
-import { BinaryTree } from "./binary-tree";
-import { type TreeNode } from "./tree-node";
+import { BinaryTree } from './binary-tree';
+import { type TreeNode } from './tree-node';
 
 export class AdvancedBinaryTree<T> extends BinaryTree<T> {
   constructor() {

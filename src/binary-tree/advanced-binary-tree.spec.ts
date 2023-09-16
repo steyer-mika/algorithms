@@ -1,7 +1,7 @@
-import { AdvancedBinaryTree } from "./advanced-binary-tree";
-import { TreeNode } from "./tree-node";
+import { AdvancedBinaryTree } from './advanced-binary-tree';
+import { TreeNode } from './tree-node';
 
-describe("AdvancedBinaryTree", () => {
+describe('AdvancedBinaryTree', () => {
   let tree: AdvancedBinaryTree<number>;
 
   beforeEach(() => {
@@ -30,24 +30,24 @@ describe("AdvancedBinaryTree", () => {
     tree.root = root;
   });
 
-  describe("getMinHeight", () => {
-    it("should return the minimum height of the tree", () => {
+  describe('getMinHeight', () => {
+    it('should return the minimum height of the tree', () => {
       expect(tree.getMinHeight()).toBe(1);
     });
   });
 
-  describe("getMaxHeight", () => {
-    it("should return the maximum height of the tree", () => {
+  describe('getMaxHeight', () => {
+    it('should return the maximum height of the tree', () => {
       expect(tree.getMaxHeight()).toBe(2);
     });
   });
 
-  describe("isBalanced", () => {
-    it("should return true if the tree is balanced", () => {
+  describe('isBalanced', () => {
+    it('should return true if the tree is balanced', () => {
       expect(tree.isBalanced()).toBe(true);
     });
 
-    it("should return false if the tree is not balanced", () => {
+    it('should return false if the tree is not balanced', () => {
       // Modify the tree to make it unbalanced
       tree.insert(100);
       tree.insert(101);
@@ -63,26 +63,26 @@ describe("AdvancedBinaryTree", () => {
     });
   });
 
-  describe("getOrdered", () => {
-    it("should return an ordered array of tree values (in-order traversal)", () => {
+  describe('getOrdered', () => {
+    it('should return an ordered array of tree values (in-order traversal)', () => {
       expect(tree.getOrdered()).toEqual([1, 2, 3, 4, 6, 7]);
     });
   });
 
-  describe("preOrder", () => {
-    it("should return an array of tree values in pre-order traversal", () => {
+  describe('preOrder', () => {
+    it('should return an array of tree values in pre-order traversal', () => {
       expect(tree.preOrder()).toEqual([4, 2, 1, 3, 6, 7]);
     });
   });
 
-  describe("postOrder", () => {
-    it("should return an array of tree values in post-order traversal", () => {
+  describe('postOrder', () => {
+    it('should return an array of tree values in post-order traversal', () => {
       expect(tree.postOrder()).toEqual([1, 3, 2, 7, 6, 4]);
     });
   });
 
-  describe("levelOrder", () => {
-    it("should return an array of tree values in level-order traversal", () => {
+  describe('levelOrder', () => {
+    it('should return an array of tree values in level-order traversal', () => {
       expect(tree.levelOrder()).toEqual([4, 2, 6, 1, 3, 7]);
     });
   });

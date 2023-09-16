@@ -1,6 +1,6 @@
-import { TreeNode } from "./tree-node";
-import { searchTreeRecursivelyAndInsert } from "./utility/search-tree-recursively-and-insert";
-import { searchTreeRecursivelyAndRemove } from "./utility/search-tree-recursively-and-remove";
+import { TreeNode } from './tree-node';
+import { searchTreeRecursivelyAndInsert } from './utility/search-tree-recursively-and-insert';
+import { searchTreeRecursivelyAndRemove } from './utility/search-tree-recursively-and-remove';
 
 export class BinaryTree<T> {
   public root: TreeNode<T> | null = null;

@@ -1,8 +1,8 @@
-import { TreeNode } from "../tree-node";
+import { TreeNode } from '../tree-node';
 
 export const searchTreeRecursivelyAndInsert = <T>(
   value: T,
-  node: TreeNode<T>
+  node: TreeNode<T>,
 ): void => {
   if (value < node.value) {
     if (node.leftNode === null) {
